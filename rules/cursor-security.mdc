@@ -1,0 +1,37 @@
+---
+description: Production security guardrails for AI-generated Next.js, Vite, React, and Supabase web apps
+globs:
+  - "**/*.ts"
+  - "**/*.tsx"
+  - "**/*.js"
+  - "**/*.jsx"
+  - "**/*.mjs"
+  - "**/*.sql"
+  - "vercel.json"
+  - "next.config.*"
+alwaysApply: true
+---
+
+# Pre-Launch Security Guardrails (Vibe-Coded Web Apps)
+
+When generating or modifying code in this repository, enforce these non-negotiable security rules:
+
+## 1. Zero Server Secrets in Client Bundles
+- NEVER prefix private credentials with `NEXT_PUBLIC_`, `VITE_`, `PUBLIC_`, or `REACT_APP_`.
+- NEVER reference `STRIPE_SECRET_KEY` (`sk_live_`, `sk_test_`), `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, database connection strings, or webhook signing secrets inside `"use client"` components or browser-bundled files.
+- Always proxy third-party AI, payment, and admin database calls through server-side Route Handlers, Server Actions, or Edge Functions.
+
+## 2. Supabase & Database Access Control (RLS)
+- Every `CREATE TABLE` in the `public` schema MUST immediately run `ALTER TABLE ... ENABLE ROW LEVEL SECURITY;`.
+- Always scope policies explicitly (`TO authenticated`, `USING (auth.uid() = user_id)`, `WITH CHECK (auth.uid() = user_id)`).
+- Never create `USING (true)` policies for `INSERT`, `UPDATE`, or `DELETE` on user-owned tables.
+- Never trust client-supplied `user_id`, `role`, `plan`, or `price` fields — derive identity from verified server session tokens.
+
+## 3. HTTP Security Headers & Source Maps
+- Keep `productionBrowserSourceMaps: false` and `poweredByHeader: false` in `next.config.*`.
+- Ship explicit `Strict-Transport-Security`, `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy`, `Permissions-Policy`, `Cross-Origin-Opener-Policy`, and a non-trivial `Content-Security-Policy` (`object-src 'none'; base-uri 'self'; frame-ancestors 'none'`).
+
+## 4. Clean Public Artifacts & Safe Endpoints
+- Never commit `.env*`, `.DS_Store`, `.bak`, SQLite dumps, or debug endpoints (`/api/debug`, `/phpinfo`, Swagger UI with live prod credentials) into `public/` or build outputs.
+- Verify webhook signatures (Stripe, GitHub, Resend, Lemon Squeezy) with timing-safe comparison against the raw request body.
+- Enforce authentication and rate limits on every mutating or billable API endpoint (especially LLM/image generation routes).
