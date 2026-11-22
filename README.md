@@ -34,7 +34,7 @@ node scripts/check-bundle-secrets.mjs ./public
 
 ### 2. Audit your live production URL (Zero Install, Free 6-Phase Scan)
 Run a passive read-only 6-phase audit (`116` checks across TLS, client JS chunks, 52 secret patterns, Supabase/Firebase probes, 28 sensitive endpoints, and 10 Observatory headers) at:
-- **[VibeShield v7.0 Live Scanner](https://vibe-checker.appwrite.network)** (free scan, zero signup; optional `$9` one-time Fix Unlock reveals exact line locations and tailored 5-platform remediation scripts).
+- **[VibeShield v7.0 Live Scanner](https://vibe-checker.appwrite.network)** (free scan, zero signup; optional **`$2` Launch Special** one-time unlock — was ~~`$9`~~ — reveals exact line locations and tailored 5-platform remediation scripts; or **`$5`** for the [Complete 3-App Suite](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack), was ~~`$29`~~).
 
 ---
 
