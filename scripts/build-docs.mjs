@@ -187,6 +187,14 @@ const html = `<!doctype html>
           <span><span style="color:#5eead4;font-weight:700">Zero-install CLI:</span> <code id="vscCliCmd">curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- yoursite.com</code></span>
           <button type="button" class="btn btn-sm" id="copyCliBtn" style="background:#1e293b;color:#f8fafc;border-color:#334155">Copy CLI</button>
         </div>
+        <details style="margin-top:10px;font-size:13px;color:var(--ink2)">
+          <summary style="cursor:pointer;font-weight:700;color:var(--brand)">Preview what the $2 Launch Special Fix Pack unlocks (was $9 — 14-day refund)</summary>
+          <div style="margin-top:8px;padding:10px 12px;border-radius:8px;background:#f8fafc;border:1px solid var(--bd);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px">
+            <div><strong>1. Exact Chunk &amp; Line Evidence</strong><br /><span style="color:var(--mut)">Unmasks exact JS bundle paths, matched key offsets, and offending header directives.</span></div>
+            <div><strong>2. Tailored 5-Platform Fix Patches</strong><br /><span style="color:var(--mut)">Ready-to-paste Next.js, Vercel, Cloudflare, Nginx &amp; Supabase RLS diffs tuned to your scan.</span></div>
+            <div><strong>3. 50-URL Batch CSV + A4 PDF</strong><br /><span style="color:var(--mut)">Export client-ready A4 security dossiers and audit staging + production in one pass.</span></div>
+          </div>
+        </details>
         <div id="vscOut" class="res-box"></div>
       </div>
       <div class="acts">
@@ -347,6 +355,11 @@ const html = `<!doctype html>
     }
     form.addEventListener("submit", function (e) { e.preventDefault(); runScan(inp.value); });
     document.querySelectorAll(".v-chip").forEach(function (c) { c.addEventListener("click", function () { runScan(c.getAttribute("data-u")); }); });
+    try {
+      var qp = new URLSearchParams(window.location.search);
+      var autoUrl = qp.get("url") || qp.get("domain");
+      if (autoUrl) runScan(autoUrl);
+    } catch (e) {}
   })();
   </script>
   <script>
