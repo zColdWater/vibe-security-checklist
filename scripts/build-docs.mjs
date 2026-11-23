@@ -306,6 +306,9 @@ const html = `<!doctype html>
         var findings = Array.isArray(d.findings) ? d.findings : [];
         var locked = d.lockedFindingsCount || 0;
         var cls = sc >= 80 ? "p-ok" : (sc >= 60 ? "p-warn" : "p-bad");
+        if (typeof window.opTrack === "function") window.opTrack("scan");
+        var ctxHost = d.hostname || u;
+        var ctxUrl = "https://omnipulse-x402.appwrite.network/checkout/vibeshield?domain=" + encodeURIComponent(ctxHost) + "&score=" + encodeURIComponent(sc) + "&issues=" + encodeURIComponent(findings.length);
         var list = findings.length ? '<ul style="margin:10px 0 0;padding-left:18px;font-size:13px;color:var(--ink2)">' + findings.slice(0, 3).map(function (f) {
           var sev = String(f.severity || "INFO").toUpperCase();
           var c2 = (sev === "CRITICAL" || sev === "HIGH") ? "p-bad" : (sev === "MEDIUM" ? "p-warn" : "p-neutral");
@@ -313,11 +316,11 @@ const html = `<!doctype html>
         }).join("") + '</ul>' : '';
         out.innerHTML =
           '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">' +
-            '<div><strong>' + esc(d.hostname || u) + '</strong> &middot; Checks: <strong>' + esc(checks) + '</strong> &middot; Findings: <strong>' + esc(findings.length) + '</strong>' + (locked ? ' (<strong>' + esc(locked) + '</strong> locked fixes)' : '') + '</div>' +
+            '<div><strong>' + esc(ctxHost) + '</strong> &middot; Checks: <strong>' + esc(checks) + '</strong> &middot; Findings: <strong>' + esc(findings.length) + '</strong>' + (locked ? ' (<strong>' + esc(locked) + '</strong> locked fixes)' : '') + '</div>' +
             '<span class="pill ' + cls + '">Score: ' + esc(sc) + '/100 (' + esc(gr) + ')</span>' +
           '</div>' + list +
           '<div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--bd);display:flex;gap:10px;flex-wrap:wrap">' +
-            '<a class="btn btn-dark btn-sm" href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener">Unlock Exact Fixes — $2 Launch Special (was $9) &rarr;</a>' +
+            '<a class="btn btn-dark btn-sm" href="' + esc(ctxUrl) + '" target="_blank" rel="noopener">Unlock Exact Fixes for ' + esc(ctxHost) + ' — $2 Launch Special (was $9) &rarr;</a>' +
             '<a class="btn btn-pri btn-sm" href="https://vibe-checker.appwrite.network/?url=' + encodeURIComponent(u) + '" target="_blank" rel="noopener">Inspect Full Trace &rarr;</a>' +
           '</div>';
       } catch (e) {
@@ -328,6 +331,21 @@ const html = `<!doctype html>
     }
     form.addEventListener("submit", function (e) { e.preventDefault(); runScan(inp.value); });
     document.querySelectorAll(".v-chip").forEach(function (c) { c.addEventListener("click", function () { runScan(c.getAttribute("data-u")); }); });
+  })();
+  </script>
+  <script>
+  (function(){
+    var E="https://omnipulse-x402.appwrite.network/v1/telemetry",D=document,W=window,R=D.documentElement,G=navigator,S=W.screen,M=Math,N=Date.now;
+    var I="vsc_"+N().toString(36)+"_"+M.random().toString(36).slice(2,10),z="",d=0,v=D.hidden?0:N(),m=0,la=0,c={scan:0,outbound:0,paywall:0};
+    try{z=Intl.DateTimeFormat().resolvedOptions().timeZone||""}catch(e){}
+    function fl(){if(v)d+=M.max(0,N()-v);v=D.hidden?0:N();}
+    function us(){m=M.max(m,M.min(100,M.round(M.max(0,W.scrollY)/M.max(1,R.scrollHeight-W.innerHeight)*100)));}
+    function tx(ev){fl();us();var b=JSON.stringify({site:"vibeshield",sid:I,event:ev,path:"/vibe-security-checklist",webdriver:!!G.webdriver,screen:S?S.width+"x"+S.height:"0x0",dwellSec:M.round(d/1e3),scrollPct:m,scansRun:c.scan,outboundClicks:c.outbound,paywallClicks:c.paywall,referrer:(D.referrer||"").slice(0,128),tz:z,lang:R.lang||"en"});try{if(!G.sendBeacon||!G.sendBeacon(E,new Blob([b],{type:"text/plain"})))fetch(E,{method:"POST",body:b,keepalive:true}).catch(function(){});}catch(e){}}
+    function lv(){fl();v=0;if(N()-la>1000){la=N();tx("leave");}}
+    W.opTrack=function(ev){if(ev in c)c[ev]++;tx(ev);};
+    W.addEventListener("scroll",us,{passive:true});D.addEventListener("visibilitychange",function(){if(D.hidden)lv();else v=N();});W.addEventListener("pagehide",lv);
+    D.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a[href]"):null;if(!a)return;var h=a.getAttribute("href")||"";if(h.indexOf("/go/gumroad")!==-1||h.indexOf("/checkout/")!==-1)W.opTrack("paywall");else if(h.indexOf("appwrite.network")!==-1)W.opTrack("outbound");});
+    tx("pageview");
   })();
   </script>
 </body>
