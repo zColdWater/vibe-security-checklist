@@ -183,6 +183,10 @@ const html = `<!doctype html>
           <button type="button" class="chip v-chip" data-u="https://linear.app">linear.app</button>
           <span style="margin-left:auto"><a href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener" style="font-weight:700">Launch Special: $2 once (was <s>$9</s>)</a> &middot; <a href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener" style="font-weight:700">All 3 Tools $5</a></span>
         </div>
+        <div style="margin-top:12px;padding:10px 12px;border-radius:9px;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font:12.5px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace">
+          <span><span style="color:#5eead4;font-weight:700">Zero-install CLI:</span> <code id="vscCliCmd">curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- yoursite.com</code></span>
+          <button type="button" class="btn btn-sm" id="copyCliBtn" style="background:#1e293b;color:#f8fafc;border-color:#334155">Copy CLI</button>
+        </div>
         <div id="vscOut" class="res-box"></div>
       </div>
       <div class="acts">
@@ -233,7 +237,7 @@ const html = `<!doctype html>
   <footer class="ft"><div class="wrap"><div class="ft-row">
     <div><strong>OmniForge &middot; Agent Arena Studio</strong> &middot; MIT Open Source Security Checklist &amp; Diagnostics.</div>
     <div class="ft-links">
-      <a href="https://zcoldwater.github.io/launch-audit-reports/tools/" target="_blank" rel="noopener">5 Free Live Tools</a>
+      <a href="https://zcoldwater.github.io/launch-audit-reports/tools/" target="_blank" rel="noopener">12 Free Live Tools</a>
       <a href="https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/" target="_blank" rel="noopener">2026 Study</a>
       <a href="https://omnipulse-x402.appwrite.network/support" target="_blank" rel="noopener">Support</a>
       <a href="https://omnipulse-x402.appwrite.network/refund-policy" target="_blank" rel="noopener">14-Day Refund</a>
@@ -267,6 +271,19 @@ const html = `<!doctype html>
         });
       }
     });
+
+    var copyCliBtn = document.getElementById("copyCliBtn");
+    var vscCliCmd = document.getElementById("vscCliCmd");
+    if (copyCliBtn && vscCliCmd) {
+      copyCliBtn.addEventListener("click", function () {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(vscCliCmd.textContent).then(function () {
+            copyCliBtn.textContent = "Copied!";
+            setTimeout(function () { copyCliBtn.textContent = "Copy CLI"; }, 1800);
+          });
+        }
+      });
+    }
 
     var boxes = document.querySelectorAll(".chk-box");
     var prog = document.getElementById("chkProg");

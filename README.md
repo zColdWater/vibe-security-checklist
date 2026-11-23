@@ -25,22 +25,31 @@ Production-ready security checklist, drop-in configuration templates, `.cursor/r
 | [`scripts/check-bundle-secrets.mjs`](./scripts/check-bundle-secrets.mjs) | Zero-dependency Node.js CLI to scan local build output (`dist/`, `.next/`, `public/`) for secrets, `.DS_Store`, and public `.js.map` files |
 
 ### Stack-Specific Interactive Guides & Live Scanners
-- [Lovable + Supabase Security Guide](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/lovable.html) · [Cursor + Next.js Guide](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/cursor.html) · [Bolt.new + Netlify Guide](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/bolt.html) · [Supabase RLS Audit Guide](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/supabase.html)
+- [Lovable + Supabase](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/lovable.html) · [Cursor + Next.js](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/cursor.html) · [v0.dev + Vercel](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/v0.html) · [Bolt.new + Netlify](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/bolt.html) · [Replit Agent](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/replit.html) · [Supabase RLS](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/supabase.html) · [Firebase Rules](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/firebase.html) · [Cloudflare Pages/Workers](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/cloudflare.html)
+- **[Live Interactive Workbench (GitHub Pages)](https://zcoldwater.github.io/vibe-security-checklist/)** — Copy configs, check off all 12 items, and run a live 116-check scan in-browser.
 
 ---
 
 ## Quick Start (60 Seconds)
 
-### 1. Run the local pre-commit / build check
+### 1. Audit your live production URL from the terminal (Zero Install, POSIX `sh`)
+```bash
+# Single-app 116-check passive security audit (CI gate supported via --fail-below 80)
+curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- yoursite.com
+
+# Full 3-engine launch suite (Security + Email DNS + AI Search) in one command
+curl -fsSL https://omnipulse-x402.appwrite.network/cli.sh | sh -s -- --suite yoursite.com
+```
+
+### 2. Run the local pre-commit / build check
 ```bash
 node scripts/check-bundle-secrets.mjs ./dist
 # or for Next.js / Vite static output:
 node scripts/check-bundle-secrets.mjs ./public
 ```
 
-### 2. Audit your live production URL (Zero Install, Free 6-Phase Scan)
-Run a passive read-only 6-phase audit (`116` checks across TLS, client JS chunks, 52 secret patterns, Supabase/Firebase probes, 28 sensitive endpoints, and 10 Observatory headers) at:
-- **[VibeShield v7.0 Live Scanner](https://vibe-checker.appwrite.network)** (free scan, zero signup; optional **`$2` Launch Special** one-time unlock — was ~~`$9`~~ — reveals exact line locations and tailored 5-platform remediation scripts; or **`$5`** for the [Complete 3-App Suite](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack), was ~~`$29`~~).
+### 3. Inspect in your browser (Zero Signup)
+- **[VibeShield v7.0 Live Scanner](https://vibe-checker.appwrite.network)** (free 6-phase scan, zero signup; optional **`$2` Launch Special** one-time unlock — was ~~`$9`~~ — reveals exact line locations and tailored 5-platform remediation scripts; or **`$5`** for the [Complete 3-App Suite](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack), was ~~`$29`~~).
 
 ---
 
