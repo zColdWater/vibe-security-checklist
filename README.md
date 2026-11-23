@@ -17,9 +17,15 @@ Production-ready security checklist, drop-in configuration templates, `.cursor/r
 | [`configs/vercel.json`](./configs/vercel.json) | Drop-in production security headers (`HSTS`, `CSP`, `XFO`, `XCTO`, `COOP`, `CORP`, `Permissions-Policy`) for Vercel apps |
 | [`configs/next-headers.mjs`](./configs/next-headers.mjs) | Drop-in `next.config.mjs` wrapper (`withVibeSecurityHeaders`) + disables `productionBrowserSourceMaps` and `X-Powered-By` |
 | [`configs/netlify-headers`](./configs/netlify-headers) | Copy to `public/_headers` for Netlify & Cloudflare Pages deployments |
+| [`configs/cloudflare-headers.js`](./configs/cloudflare-headers.js) | Drop-in Cloudflare Workers edge security headers & dotfile/source-map blocker |
+| [`configs/nginx-security.conf`](./configs/nginx-security.conf) | Production Nginx security headers, `server_tokens off`, and `.env`/`.git`/`.map` deny rules |
 | [`configs/supabase-rls-template.sql`](./configs/supabase-rls-template.sql) | SQL audit queries that catch every `public` table missing `RLS` + baseline `auth.uid()` user-isolation policies |
+| [`configs/firebase-rules-template.rules`](./configs/firebase-rules-template.rules) | Production Firestore security rules baseline preventing privilege escalation and public reads |
 | [`rules/cursor-security.mdc`](./rules/cursor-security.mdc) | Copy into `.cursor/rules/security.mdc` so AI coding agents refuse to leak server secrets or skip Supabase RLS |
 | [`scripts/check-bundle-secrets.mjs`](./scripts/check-bundle-secrets.mjs) | Zero-dependency Node.js CLI to scan local build output (`dist/`, `.next/`, `public/`) for secrets, `.DS_Store`, and public `.js.map` files |
+
+### Stack-Specific Interactive Guides & Live Scanners
+- [Lovable + Supabase Security Guide](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/lovable.html) · [Cursor + Next.js Guide](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/cursor.html) · [Bolt.new + Netlify Guide](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/bolt.html) · [Supabase RLS Audit Guide](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/supabase.html)
 
 ---
 

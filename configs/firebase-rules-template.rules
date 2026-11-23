@@ -1,0 +1,35 @@
+// Production Firestore Security Rules Baseline (MIT)
+// Never deploy `allow read, write: if true;` or expiring prototype dates to production.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Deny all access by default unless explicitly permitted below
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Per-user isolated profile documents
+    match /users/{userId} {
+      allow read: if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null
+        && request.auth.uid == userId
+        && !('role' in request.resource.data)
+        && !('plan' in request.resource.data);
+      allow update: if request.auth != null
+        && request.auth.uid == userId
+        && request.resource.data.diff(resource.data).affectedKeys()
+             .hasOnly(['displayName', 'avatarUrl', 'updatedAt']);
+      allow delete: if false;
+    }
+
+    // User-owned workspace records (must carry ownerId matching request.auth.uid)
+    match /projects/{projectId} {
+      allow read: if request.auth != null && resource.data.ownerId == request.auth.uid;
+      allow create: if request.auth != null && request.resource.data.ownerId == request.auth.uid;
+      allow update, delete: if request.auth != null
+        && resource.data.ownerId == request.auth.uid
+        && request.resource.data.ownerId == resource.data.ownerId;
+    }
+  }
+}
