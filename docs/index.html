@@ -82,34 +82,33 @@
 
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">MIT Open Source v1.1.0 &middot; Built from 6,120+ Live AI App Audits</span>
-      <h1>Pre-Launch Security Checklist &amp; Hardened Configs for AI-Built Web Apps</h1>
-      <p class="lead">In our 2026 empirical audit of 55 freshly launched Cursor, Lovable, Bolt, and Next.js web apps, 74.5% shipped missing 8–9 of 10 security headers and 20.0% ran live Supabase backends. Run a live read-only 116-check scan below, then copy-paste MIT production configs for your exact hosting stack.</p>
+      <span class="eyebrow">MIT Open Source v1.1.0 &middot; 6,120+ Live AI App Audits &middot; Zero Signup</span>
+      <h1>Pre-Launch Security Scanner &amp; MIT Configs for AI-Built Web Apps</h1>
+      <p class="lead">74.5% of freshly launched Cursor, Lovable, Bolt, and v0 apps miss 8–9 of 10 security headers and 20% run live Supabase backends. Run a live 116-check VibeShield v7.0 scan right here, then grab 8 MIT production configs below.</p>
+      <div id="scanner" class="card" style="margin:18px 0 14px;border-color:#99f6e4;box-shadow:0 4px 16px rgba(15,118,110,.08)">
+        <form id="vscForm" class="scan-row" style="margin-top:0">
+          <input id="vscInput" class="scan-in" type="text" placeholder="https://your-app.vercel.app or yourdomain.com" required maxlength="150" />
+          <button id="vscBtn" class="btn btn-pri" type="submit">Scan Live URL Free (116 Checks) &rarr;</button>
+        </form>
+        <div class="chips">
+          <span>1-click live demo:</span>
+          <button type="button" class="chip v-chip" data-u="https://supabase.com">supabase.com</button>
+          <button type="button" class="chip v-chip" data-u="https://vercel.com">vercel.com</button>
+          <button type="button" class="chip v-chip" data-u="https://linear.app">linear.app</button>
+          <span style="margin-left:auto"><a href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener" style="font-weight:700">Launch Special: $2 once (was <s>$9</s>)</a> &middot; <a href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener" style="font-weight:700">All 3 Tools $5</a></span>
+        </div>
+        <div id="vscOut" class="res-box"></div>
+      </div>
       <div class="acts">
-        <a class="btn btn-pri" href="https://vibe-checker.appwrite.network" target="_blank" rel="noopener">Open Full VibeShield v7.0 Free &rarr;</a>
-        <a class="btn btn-dark" href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener">Unlock Exact Code Fixes — $2 Once (was $9)</a>
-        <a class="btn" href="https://github.com/zColdWater/vibe-security-checklist" target="_blank" rel="noopener">Clone MIT Repo on GitHub</a>
+        <a class="btn btn-dark btn-sm" href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener">Unlock Exact Code Fixes — $2 Once (was $9)</a>
+        <a class="btn btn-sm" href="#configs">Jump to 8 MIT Configs</a>
+        <a class="btn btn-sm" href="#checklist">12-Point Checklist</a>
+        <a class="btn btn-sm" href="https://github.com/zColdWater/vibe-security-checklist" target="_blank" rel="noopener">GitHub Repo (MIT)</a>
       </div>
     </div>
   </section>
 
   <main class="wrap">
-    <section id="scanner" class="card">
-      <h2 style="margin:0 0 4px">1. Run a Live 6-Phase VibeShield v7.0 Audit Free (Zero Signup)</h2>
-      <p style="margin:0;color:var(--mut);font-size:13.5px">Passively inspects TLS, up to 24 production JS chunks across 52 secret patterns, safe Supabase/Firebase checks, 28 SPA-filtered paths, and 10 Mozilla Observatory headers:</p>
-      <form id="vscForm" class="scan-row">
-        <input id="vscInput" class="scan-in" type="text" placeholder="https://your-app.vercel.app or yourdomain.com" required maxlength="150" />
-        <button id="vscBtn" class="btn btn-pri" type="submit">Scan Live URL Free</button>
-      </form>
-      <div class="chips">
-        <span>Try live demos:</span>
-        <button type="button" class="chip v-chip" data-u="https://supabase.com">supabase.com</button>
-        <button type="button" class="chip v-chip" data-u="https://vercel.com">vercel.com</button>
-        <button type="button" class="chip v-chip" data-u="https://linear.app">linear.app</button>
-      </div>
-      <div id="vscOut" class="res-box"></div>
-    </section>
-
     <section id="configs" class="card">
       <h2 style="margin:0 0 6px">2. Copy-Paste Production Security Configs (MIT License)</h2>
       <p style="margin:0 0 14px;color:var(--mut);font-size:13.5px">Drop these directly into your repository to harden security headers, Supabase RLS, Firestore rules, and Cursor AI code generation:</p>
