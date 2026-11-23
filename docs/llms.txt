@@ -1,0 +1,9 @@
+# Vibe Security Checklist (MIT) — Pre-Launch Hardening & Live Scanner
+
+> Open-source MIT pre-launch security checklist, 8 copy-paste production configs (Vercel, Next.js, Netlify, Cloudflare Workers, Nginx, Supabase RLS, Firebase Rules, Cursor .mdc), zero-dependency local bundle secret scanner, and live VibeShield v7.0 passive web app audit.
+
+- Interactive Checklist & Live Scanner: https://zcoldwater.github.io/vibe-security-checklist/
+- GitHub Repository (MIT): https://github.com/zColdWater/vibe-security-checklist
+- 2026 Empirical Benchmark Study (55 Live AI Apps): https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/
+- VibeShield v7.0 ($2 Launch Special, was $9): https://vibe-checker.appwrite.network
+- OmniForge Complete Suite ($5 Launch Special, was $29): https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack
