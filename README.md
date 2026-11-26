@@ -2,7 +2,7 @@
 
 Production-ready security checklist, drop-in configuration templates, `.cursor/rules/security.mdc` guardrails, and a zero-dependency local bundle scanner for **Cursor, Lovable, Bolt, v0, Replit, Next.js, Vercel, Netlify, Cloudflare, and Supabase** web apps.
 
-> **Why this exists:** In our [2026 Empirical Security Study](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/) across **55 freshly launched public AI-built web apps** (`6,120+` passive checks via [VibeShield v7.0](https://vibe-checker.appwrite.network)):
+> **Why this exists:** In our [2026 Empirical Security Study](https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/) across **55 freshly launched public AI-built web apps** (`6,120+` passive checks via [VibeShield v7.0](https://shipbastion.com)):
 > - **74.5% (41/55)** shipped missing **8–9 of 10** Mozilla Observatory security headers (`CSP`, `HSTS`, `XFO`, `XCTO`, `Referrer-Policy`, `Permissions-Policy`, `COOP`, `CORP`, `security.txt`).
 > - **20.0% (11/55)** shipped live **Supabase** backends where missing Row Level Security (`RLS`) policies expose tables to anyone with the public anon key.
 > - **3.6% (2/55)** leaked a **client-delivered secret or API key** (including a live Stripe secret key, strictly anonymized).
@@ -35,10 +35,10 @@ Production-ready security checklist, drop-in configuration templates, `.cursor/r
 ### 1. Audit your live production URL from the terminal (Zero Install, POSIX `sh`)
 ```bash
 # Single-app 116-check passive security audit (CI gate supported via --fail-below 80)
-curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- yoursite.com
+curl -fsSL https://shipbastion.com/cli.sh | sh -s -- yoursite.com
 
 # Full 3-engine launch suite (Security + Email DNS + AI Search) in one command
-curl -fsSL https://omnipulse-x402.appwrite.network/cli.sh | sh -s -- --suite yoursite.com
+curl -fsSL https://api.shipbastion.com/cli.sh | sh -s -- --suite yoursite.com
 ```
 
 ### 2. Run the local pre-commit / build check
@@ -49,7 +49,7 @@ node scripts/check-bundle-secrets.mjs ./public
 ```
 
 ### 3. Inspect in your browser (Zero Signup)
-- **[VibeShield v7.0 Live Scanner](https://vibe-checker.appwrite.network)** (free 6-phase scan, zero signup; optional **`$2` Launch Special** one-time unlock — was ~~`$9`~~ — reveals exact line locations and tailored 5-platform remediation scripts; or **`$5`** for the [Complete 3-App Suite](https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack), was ~~`$29`~~).
+- **[VibeShield v7.0 Live Scanner](https://shipbastion.com)** (free 6-phase scan, zero signup; optional **`$2` Launch Special** one-time unlock — was ~~`$9`~~ — reveals exact line locations and tailored 5-platform remediation scripts; or **`$5`** for the [Complete 3-App Suite](https://api.shipbastion.com/go/gumroad/launch-stack), was ~~`$29`~~).
 
 ---
 
@@ -84,9 +84,9 @@ node scripts/check-bundle-secrets.mjs ./public
 - [ ] Every LLM, image-generation, email-sending, or external-API route has per-IP / per-user rate limiting and maximum token/payload bounds to prevent runaway API bills.
 
 ### 6. Custom Domain, Email & AI Search Pre-Launch Readiness
-- [ ] Before moving off `.vercel.app` or `.lovable.app`, verify domain availability across TLDs and check USPTO Class 009/042 trademarks ([BrandShield v6.2 — 100% Free Checker](https://brand-checker.appwrite.network)).
-- [ ] Before sending signup/auth emails, verify SPF (`<=10` DNS lookups), DKIM selectors, DMARC policy (`p=quarantine` or `p=reject`), and DNSBL status ([InboxShield v7.0](https://inbox-checker.appwrite.network)).
-- [ ] Publish clean `robots.txt` AI crawler rules, Schema.org JSON-LD, and `/llms.txt` ([CiteReady v6.0](https://citeready-checker.appwrite.network)).
+- [ ] Before moving off `.vercel.app` or `.lovable.app`, verify domain availability across TLDs and check USPTO Class 009/042 trademarks ([BrandShield v6.2 — 100% Free Checker](https://brand.shipbastion.com)).
+- [ ] Before sending signup/auth emails, verify SPF (`<=10` DNS lookups), DKIM selectors, DMARC policy (`p=quarantine` or `p=reject`), and DNSBL status ([InboxShield v7.0](https://inbox.shipbastion.com)).
+- [ ] Publish clean `robots.txt` AI crawler rules, Schema.org JSON-LD, and `/llms.txt` ([CiteReady v6.0](https://cite.shipbastion.com)).
 
 ---
 

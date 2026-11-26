@@ -5,5 +5,5 @@
 - Interactive Checklist & Live Scanner: https://zcoldwater.github.io/vibe-security-checklist/
 - GitHub Repository (MIT): https://github.com/zColdWater/vibe-security-checklist
 - 2026 Empirical Benchmark Study (55 Live AI Apps): https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/
-- VibeShield v7.0 ($2 Launch Special, was $9): https://vibe-checker.appwrite.network
-- OmniForge Complete Suite ($5 Launch Special, was $29): https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack
+- VibeShield v7.0 ($2 Launch Special, was $9): https://shipbastion.com
+- OmniForge Complete Suite ($5 Launch Special, was $29): https://api.shipbastion.com/go/gumroad/launch-stack

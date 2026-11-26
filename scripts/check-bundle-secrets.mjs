@@ -86,7 +86,7 @@ walk(TARGET);
 
 if (findings.length === 0) {
   console.log(`PASS: Scanned ${scannedFiles} files in ${TARGET} with 0 secret/artifact findings.`);
-  console.log("Tip: Also scan your live production URL (headers, CSP, TLS, Supabase RLS & 28 endpoint probes) at https://vibe-checker.appwrite.network");
+  console.log("Tip: Also scan your live production URL (headers, CSP, TLS, Supabase RLS & 28 endpoint probes) at https://shipbastion.com");
   process.exit(0);
 }
 

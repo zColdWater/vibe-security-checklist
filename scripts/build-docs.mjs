@@ -97,11 +97,11 @@ const html = `<!doctype html>
   <meta property="og:title" content="Vibe Security Checklist (MIT) — Pre-Launch Configs &amp; Live Scanner" />
   <meta property="og:description" content="8 copy-paste MIT security configs (Vercel, Next.js, Netlify, Cloudflare, Nginx, Supabase RLS, Firebase, Cursor .mdc) + live 116-check VibeShield v7.0 scanner." />
   <meta property="og:url" content="${BASE_URL}/" />
-  <meta property="og:image" content="https://brand-checker.appwrite.network/assets/og-benchmark-vibe-coding-2026.png" />
+  <meta property="og:image" content="https://brand.shipbastion.com/assets/og-benchmark-vibe-coding-2026.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://brand-checker.appwrite.network/assets/og-benchmark-vibe-coding-2026.png" />
+  <meta name="twitter:image" content="https://brand.shipbastion.com/assets/og-benchmark-vibe-coding-2026.png" />
   <style>
     :root{--bg:#f8fafc;--card:#ffffff;--ink:#0f172a;--ink2:#334155;--mut:#64748b;--bd:#e2e8f0;--brand:#0f766e;--brand2:#115e59;--dark:#0f172a;--ok-bg:#dcfce7;--ok-fg:#166534;--warn-bg:#fef3c7;--warn-fg:#92400e;--bad-bg:#fee2e2;--bad-fg:#991b1b}
     *{box-sizing:border-box}
@@ -162,7 +162,7 @@ const html = `<!doctype html>
       <a href="#checklist">12-Point Checklist</a>
       <a href="https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/" target="_blank" rel="noopener">2026 Benchmark Study</a>
       <a href="https://github.com/zColdWater/vibe-security-checklist" target="_blank" rel="noopener">GitHub (MIT)</a>
-      <a class="btn btn-pri btn-sm" href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener">Launch Special: $2 (was $9)</a>
+      <a class="btn btn-pri btn-sm" href="https://api.shipbastion.com/go/gumroad/vibeshield" target="_blank" rel="noopener">Launch Special: $2 (was $9)</a>
     </nav>
   </div></header>
 
@@ -181,10 +181,10 @@ const html = `<!doctype html>
           <button type="button" class="chip v-chip" data-u="https://supabase.com">supabase.com</button>
           <button type="button" class="chip v-chip" data-u="https://vercel.com">vercel.com</button>
           <button type="button" class="chip v-chip" data-u="https://linear.app">linear.app</button>
-          <span style="margin-left:auto"><a href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener" style="font-weight:700">Launch Special: $2 once (was <s>$9</s>)</a> &middot; <a href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener" style="font-weight:700">All 3 Tools $5</a></span>
+          <span style="margin-left:auto"><a href="https://api.shipbastion.com/go/gumroad/vibeshield" target="_blank" rel="noopener" style="font-weight:700">Launch Special: $2 once (was <s>$9</s>)</a> &middot; <a href="https://api.shipbastion.com/go/gumroad/launch-stack" target="_blank" rel="noopener" style="font-weight:700">All 3 Tools $5</a></span>
         </div>
         <div style="margin-top:12px;padding:10px 12px;border-radius:9px;background:#0f172a;color:#e2e8f0;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font:12.5px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace">
-          <span><span style="color:#5eead4;font-weight:700">Zero-install CLI:</span> <code id="vscCliCmd">curl -fsSL https://vibe-checker.appwrite.network/cli.sh | sh -s -- yoursite.com</code></span>
+          <span><span style="color:#5eead4;font-weight:700">Zero-install CLI:</span> <code id="vscCliCmd">curl -fsSL https://shipbastion.com/cli.sh | sh -s -- yoursite.com</code></span>
           <button type="button" class="btn btn-sm" id="copyCliBtn" style="background:#1e293b;color:#f8fafc;border-color:#334155">Copy CLI</button>
         </div>
         <details style="margin-top:10px;font-size:13px;color:var(--ink2)">
@@ -198,7 +198,7 @@ const html = `<!doctype html>
         <div id="vscOut" class="res-box"></div>
       </div>
       <div class="acts">
-        <a class="btn btn-dark btn-sm" href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener">Unlock Exact Code Fixes — $2 Once (was $9)</a>
+        <a class="btn btn-dark btn-sm" href="https://api.shipbastion.com/go/gumroad/vibeshield" target="_blank" rel="noopener">Unlock Exact Code Fixes — $2 Once (was $9)</a>
         <a class="btn btn-sm" href="#configs">Jump to 8 MIT Configs</a>
         <a class="btn btn-sm" href="#checklist">12-Point Checklist</a>
         <a class="btn btn-sm" href="https://github.com/zColdWater/vibe-security-checklist" target="_blank" rel="noopener">GitHub Repo (MIT)</a>
@@ -236,8 +236,8 @@ const html = `<!doctype html>
         <span style="color:var(--ink2);font-size:14px">One-time perpetual browser unlock with 14-day refund guarantee (zero recurring monthly fee). Complete Suite unlocks <strong>VibeShield + InboxShield + CiteReady</strong>; <strong>BrandShield</strong> stays 100% Free Forever.</span>
       </div>
       <div style="display:flex;flex-direction:column;gap:8px;min-width:250px">
-        <a class="btn btn-dark" href="https://omnipulse-x402.appwrite.network/go/gumroad/vibeshield" target="_blank" rel="noopener">Unlock VibeShield — $2 (was $9)</a>
-        <a class="btn btn-pri" href="https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack" target="_blank" rel="noopener">Complete 3-App Suite — $5 (was $29)</a>
+        <a class="btn btn-dark" href="https://api.shipbastion.com/go/gumroad/vibeshield" target="_blank" rel="noopener">Unlock VibeShield — $2 (was $9)</a>
+        <a class="btn btn-pri" href="https://api.shipbastion.com/go/gumroad/launch-stack" target="_blank" rel="noopener">Complete 3-App Suite — $5 (was $29)</a>
       </div>
     </div>
   </main>
@@ -247,8 +247,8 @@ const html = `<!doctype html>
     <div class="ft-links">
       <a href="https://zcoldwater.github.io/launch-audit-reports/tools/" target="_blank" rel="noopener">12 Free Live Tools</a>
       <a href="https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/" target="_blank" rel="noopener">2026 Study</a>
-      <a href="https://omnipulse-x402.appwrite.network/support" target="_blank" rel="noopener">Support</a>
-      <a href="https://omnipulse-x402.appwrite.network/refund-policy" target="_blank" rel="noopener">14-Day Refund</a>
+      <a href="https://api.shipbastion.com/support" target="_blank" rel="noopener">Support</a>
+      <a href="https://api.shipbastion.com/refund-policy" target="_blank" rel="noopener">14-Day Refund</a>
       <a href="mailto:agentarenastudio@proton.me">agentarenastudio@proton.me</a>
     </div>
   </div></div></footer>
@@ -318,10 +318,10 @@ const html = `<!doctype html>
       out.style.display = "block";
       out.innerHTML = '<span style="color:var(--mut)">Scanning <strong>' + esc(u) + '</strong> with VibeShield v7.0 (116 passive checks)...</span>';
       try {
-        var r = await fetch("https://vibe-checker.appwrite.network/api/free-scan?url=" + encodeURIComponent(u), { headers: { Accept: "application/json" } });
+        var r = await fetch("https://shipbastion.com/api/free-scan?url=" + encodeURIComponent(u), { headers: { Accept: "application/json" } });
         var d = await r.json().catch(function () { return {}; });
         if (!r.ok || d.ok === false) {
-          out.innerHTML = '<span class="pill p-bad">Notice</span> ' + esc(d.error || "Could not scan URL.") + ' <a href="https://vibe-checker.appwrite.network/?url=' + encodeURIComponent(u) + '" target="_blank" rel="noopener" style="margin-left:8px;font-weight:600">Open VibeShield v7.0 &rarr;</a>';
+          out.innerHTML = '<span class="pill p-bad">Notice</span> ' + esc(d.error || "Could not scan URL.") + ' <a href="https://shipbastion.com/?url=' + encodeURIComponent(u) + '" target="_blank" rel="noopener" style="margin-left:8px;font-weight:600">Open VibeShield v7.0 &rarr;</a>';
           return;
         }
         var sc = (d.assessment && typeof d.assessment.score === "number") ? d.assessment.score : 0;
@@ -332,7 +332,7 @@ const html = `<!doctype html>
         var cls = sc >= 80 ? "p-ok" : (sc >= 60 ? "p-warn" : "p-bad");
         if (typeof window.opTrack === "function") window.opTrack("scan");
         var ctxHost = d.hostname || u;
-        var ctxUrl = "https://omnipulse-x402.appwrite.network/checkout/vibeshield?domain=" + encodeURIComponent(ctxHost) + "&score=" + encodeURIComponent(sc) + "&issues=" + encodeURIComponent(findings.length);
+        var ctxUrl = "https://api.shipbastion.com/checkout/vibeshield?domain=" + encodeURIComponent(ctxHost) + "&score=" + encodeURIComponent(sc) + "&issues=" + encodeURIComponent(findings.length);
         var list = findings.length ? '<ul style="margin:10px 0 0;padding-left:18px;font-size:13px;color:var(--ink2)">' + findings.slice(0, 3).map(function (f) {
           var sev = String(f.severity || "INFO").toUpperCase();
           var c2 = (sev === "CRITICAL" || sev === "HIGH") ? "p-bad" : (sev === "MEDIUM" ? "p-warn" : "p-neutral");
@@ -345,10 +345,10 @@ const html = `<!doctype html>
           '</div>' + list +
           '<div style="margin-top:12px;padding-top:10px;border-top:1px solid var(--bd);display:flex;gap:10px;flex-wrap:wrap">' +
             '<a class="btn btn-dark btn-sm" href="' + esc(ctxUrl) + '" target="_blank" rel="noopener">Unlock Exact Fixes for ' + esc(ctxHost) + ' — $2 Launch Special (was $9) &rarr;</a>' +
-            '<a class="btn btn-pri btn-sm" href="https://vibe-checker.appwrite.network/?url=' + encodeURIComponent(u) + '" target="_blank" rel="noopener">Inspect Full Trace &rarr;</a>' +
+            '<a class="btn btn-pri btn-sm" href="https://shipbastion.com/?url=' + encodeURIComponent(u) + '" target="_blank" rel="noopener">Inspect Full Trace &rarr;</a>' +
           '</div>';
       } catch (e) {
-        out.innerHTML = '<span class="pill p-warn">Notice</span> <a href="https://vibe-checker.appwrite.network/?url=' + encodeURIComponent(u) + '" target="_blank" rel="noopener" style="font-weight:600">Open VibeShield v7.0 directly &rarr;</a>';
+        out.innerHTML = '<span class="pill p-warn">Notice</span> <a href="https://shipbastion.com/?url=' + encodeURIComponent(u) + '" target="_blank" rel="noopener" style="font-weight:600">Open VibeShield v7.0 directly &rarr;</a>';
       } finally {
         btn.disabled = false;
       }
@@ -364,7 +364,7 @@ const html = `<!doctype html>
   </script>
   <script>
   (function(){
-    var E="https://omnipulse-x402.appwrite.network/v1/telemetry",D=document,W=window,R=D.documentElement,G=navigator,S=W.screen,M=Math,N=Date.now;
+    var E="https://api.shipbastion.com/v1/telemetry",D=document,W=window,R=D.documentElement,G=navigator,S=W.screen,M=Math,N=Date.now;
     var I="vsc_"+N().toString(36)+"_"+M.random().toString(36).slice(2,10),z="",d=0,v=D.hidden?0:N(),m=0,la=0,c={scan:0,outbound:0,paywall:0};
     try{z=Intl.DateTimeFormat().resolvedOptions().timeZone||""}catch(e){}
     function fl(){if(v)d+=M.max(0,N()-v);v=D.hidden?0:N();}
@@ -384,6 +384,6 @@ fs.mkdirSync(DOCS, { recursive: true });
 fs.writeFileSync(path.join(DOCS, "index.html"), html);
 fs.writeFileSync(path.join(DOCS, "robots.txt"), `User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nUser-agent: ClaudeBot\nAllow: /\n\nUser-agent: PerplexityBot\nAllow: /\n\nSitemap: ${BASE_URL}/sitemap.xml\n`);
 fs.writeFileSync(path.join(DOCS, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url><loc>${BASE_URL}/</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n  <url><loc>${BASE_URL}/llms.txt</loc><lastmod>${TODAY}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n</urlset>\n`);
-fs.writeFileSync(path.join(DOCS, "llms.txt"), `# Vibe Security Checklist (MIT) — Pre-Launch Hardening & Live Scanner\n\n> Open-source MIT pre-launch security checklist, 8 copy-paste production configs (Vercel, Next.js, Netlify, Cloudflare Workers, Nginx, Supabase RLS, Firebase Rules, Cursor .mdc), zero-dependency local bundle secret scanner, and live VibeShield v7.0 passive web app audit.\n\n- Interactive Checklist & Live Scanner: ${BASE_URL}/\n- GitHub Repository (MIT): https://github.com/zColdWater/vibe-security-checklist\n- 2026 Empirical Benchmark Study (55 Live AI Apps): https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/\n- VibeShield v7.0 ($2 Launch Special, was $9): https://vibe-checker.appwrite.network\n- OmniForge Complete Suite ($5 Launch Special, was $29): https://omnipulse-x402.appwrite.network/go/gumroad/launch-stack\n`);
+fs.writeFileSync(path.join(DOCS, "llms.txt"), `# Vibe Security Checklist (MIT) — Pre-Launch Hardening & Live Scanner\n\n> Open-source MIT pre-launch security checklist, 8 copy-paste production configs (Vercel, Next.js, Netlify, Cloudflare Workers, Nginx, Supabase RLS, Firebase Rules, Cursor .mdc), zero-dependency local bundle secret scanner, and live VibeShield v7.0 passive web app audit.\n\n- Interactive Checklist & Live Scanner: ${BASE_URL}/\n- GitHub Repository (MIT): https://github.com/zColdWater/vibe-security-checklist\n- 2026 Empirical Benchmark Study (55 Live AI Apps): https://zcoldwater.github.io/launch-audit-reports/vibe-security-2026/\n- VibeShield v7.0 ($2 Launch Special, was $9): https://shipbastion.com\n- OmniForge Complete Suite ($5 Launch Special, was $29): https://api.shipbastion.com/go/gumroad/launch-stack\n`);
 fs.writeFileSync(path.join(DOCS, `${INDEXNOW_KEY}.txt`), INDEXNOW_KEY);
 console.log(`Built docs/index.html (${html.length} B), IndexNow key: ${INDEXNOW_KEY}`);
